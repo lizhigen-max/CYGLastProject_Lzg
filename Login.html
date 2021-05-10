@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="html/css/Login.css"/>
+</head>
+<body>
+    <!--<body background="intelligent.png" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">-->
+    <div id="login">
+        <h1>Login</h1>
+        <form method="post">
+            <input id="un" type="text" required="required" placeholder="用户名" name="u" value="admin"></input>
+            <input id="pw" type="password" required="required" placeholder="密码" name="p"></input>
+            <button class="but" type="submit" onclick="Checksum();return false;">登录</button>
+        </form>
+    </div>
+
+<script>
+    function Checksum() {
+       if(document.getElementById("un").value=="admin")
+       {
+            if(document.getElementById("pw").value!="admin")
+            {
+                alert("Sorry, the passworld is error!");
+            }else{
+                window.location.href="html/main.html";
+            }
+       }else
+       {
+            alert("Sorry, can't found the userName!");
+       }
+    }
+</script>
+</body>
+</html>
